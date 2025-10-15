@@ -102,7 +102,7 @@ function ProjectCard({
   link,
 }: ProjectCardProps) {
   return (
-    <Card className="flex h-full flex-col overflow-hidden border p-3">
+    <Card className="flex h-full flex-col overflow-hidden border p-3 print:p-2">
       <CardHeader>
         <div className="space-y-1">
           <CardTitle className="text-base">
@@ -134,12 +134,12 @@ export function Projects({
   projects,
 }: ProjectsProps) {
   return (
-    <Section className="scroll-mb-16 print:space-y-4">
+    <Section className="scroll-mb-16 print:space-y-2">
       <h2 className="text-xl font-bold" id="side-projects">
         Side projects
       </h2>
       <div
-        className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2"
+        className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-1 projects-grid"
         role="feed"
         aria-labelledby="side-projects"
       >

@@ -57,14 +57,16 @@ function SocialButton({
   const IconComponent = ICON_MAP[iconType];
   
   return (
-    <Button className="size-8" variant="outline" size="icon" asChild={true}>
+    <Button className="size-8 print:size-auto print:px-2 print:py-1 print:border print:border-black print:bg-transparent" variant="outline" size="icon" asChild={true}>
       <a
         href={href}
         aria-label={label}
         target="_blank"
         rel="noopener noreferrer"
+        className="print:flex print:items-center print:gap-1 print:text-black print:no-underline"
       >
-        <IconComponent className="size-4" aria-hidden="true" />
+        <IconComponent className="size-4 print:size-3 print:text-black" aria-hidden="true" />
+        <span className="hidden print:inline text-xs print:text-black">{label}</span>
       </a>
     </Button>
   );
@@ -81,18 +83,9 @@ function ContactButtons({
 }: ContactButtonsProps) {
   return (
     <ul
-      className="flex list-none gap-x-1 pt-1 font-mono text-sm text-foreground/80 print:hidden"
+      className="flex list-none gap-x-1 pt-1 font-mono text-sm text-foreground/80 print:flex print:gap-x-2 print:pt-0"
       aria-label="Contact links"
     >
-      {personalWebsiteUrl && (
-        <li>
-          <SocialButton
-            href={personalWebsiteUrl}
-            iconType="globe"
-            label="Personal website"
-          />
-        </li>
-      )}
       {contact.email && (
         <li>
           <SocialButton
@@ -158,13 +151,27 @@ function PrintContact({
         </>
       )}
       {contact.tel && (
-        <a
-          className="underline hover:text-foreground/70"
-          href={`tel:${contact.tel}`}
-        >
-          {contact.tel}
-        </a>
+        <>
+          <a
+            className="underline hover:text-foreground/70"
+            href={`tel:${contact.tel}`}
+          >
+            {contact.tel}
+          </a>
+          <span aria-hidden="true">/</span>
+        </>
       )}
+      {contact.social.map((social, index) => (
+        <React.Fragment key={social.name}>
+          <a
+            className="underline hover:text-foreground/70"
+            href={social.url}
+          >
+            {social.name}
+          </a>
+          {index < contact.social.length - 1 && <span aria-hidden="true">/</span>}
+        </React.Fragment>
+      ))}
     </div>
   );
 }
@@ -174,8 +181,8 @@ function PrintContact({
  */
 export function Header() {
   return (
-    <header className="flex items-center justify-between">
-      <div className="flex-1 space-y-1.5">
+    <header className="flex items-center justify-between print:space-y-0">
+      <div className="flex-1 space-y-1.5 print:space-y-0.5">
         <h1 className="text-2xl font-bold" id="resume-name">
           {RESUME_DATA.name}
         </h1>
@@ -193,10 +200,6 @@ export function Header() {
           personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
         />
 
-        <PrintContact
-          contact={RESUME_DATA.contact}
-          personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
-        />
       </div>
 
       <Avatar

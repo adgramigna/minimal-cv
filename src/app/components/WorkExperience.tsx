@@ -103,8 +103,8 @@ function WorkExperienceItem({
   const { company, link, badges, title, start, end, description } = work;
 
   return (
-    <Card className="py-1 print:py-0">
-      <CardHeader className="print:space-y-1">
+    <Card className="py-1 print:py-0 work-experience-item">
+      <CardHeader className="print:space-y-0.5">
         <div className="flex items-center justify-between gap-x-2 text-base">
           <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
             <CompanyLink company={company} link={link} />
@@ -153,7 +153,7 @@ export function WorkExperience({
         Work Experience
       </h2>
       <div
-        className="space-y-4 print:space-y-0"
+        className="space-y-4 print:space-y-1"
         role="feed"
         aria-labelledby="work-experience"
       >

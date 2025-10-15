@@ -7,6 +7,7 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { generateResumeStructuredData } from "@/lib/structured-data";
 import { Education } from "./components/Education";
 import { Header } from "./components/Header";
+import { PrintButton } from "./components/PrintButton";
 import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
 import { Summary } from "./components/Summary";
@@ -80,7 +81,7 @@ export default function ResumePage() {
         </div>
 
         <section
-          className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4"
+          className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-2 resume-content"
           aria-label="Resume Content"
         >
           <SectionErrorBoundary sectionName="Header">
@@ -89,7 +90,7 @@ export default function ResumePage() {
             </Suspense>
           </SectionErrorBoundary>
 
-          <div className="space-y-8 print:space-y-4">
+          <div className="space-y-8 print:space-y-2">
             <SectionErrorBoundary sectionName="Summary">
               <Suspense fallback={<SectionSkeleton lines={2} />}>
                 <Summary summary={RESUME_DATA.summary} />
@@ -123,6 +124,9 @@ export default function ResumePage() {
         </section>
 
         <nav className="print:hidden" aria-label="Quick navigation">
+          <div className="mb-4 flex justify-center">
+            <PrintButton />
+          </div>
           <CommandMenu links={getCommandMenuLinks()} />
         </nav>
       </main>

@@ -35,8 +35,8 @@ function EducationItem({ education }: EducationItemProps) {
   const { school, start, end, degree } = education;
 
   return (
-    <Card>
-      <CardHeader>
+    <Card className="print:py-1">
+      <CardHeader className="print:space-y-0.5">
         <div className="flex items-center justify-between gap-x-2 text-base">
           <h3
             className="font-semibold leading-none"
@@ -74,7 +74,7 @@ export function Education({ education }: EducationListProps) {
         Education
       </h2>
       <div
-        className="space-y-4"
+        className="space-y-4 print:space-y-1"
         role="feed"
         aria-labelledby="education-section"
       >

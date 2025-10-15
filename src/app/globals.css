@@ -78,3 +78,217 @@
 .print-force-new-page {
   page-break-before: always;
 }
+
+/* Print-specific optimizations for single page CV */
+@media print {
+  @page {
+    margin: 0.5in;
+    size: A4;
+    /* Remove headers and footers */
+    @top-left { content: ""; }
+    @top-center { content: ""; }
+    @top-right { content: ""; }
+    @bottom-left { content: ""; }
+    @bottom-center { content: ""; }
+    @bottom-right { content: ""; }
+  }
+  
+  body {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+  
+  /* Reduce overall container padding */
+  .container {
+    padding: 0 !important;
+    max-width: none !important;
+  }
+  
+  /* Optimize main content area */
+  main {
+    padding: 0 !important;
+  }
+  
+  /* Reduce section spacing */
+  section {
+    margin-bottom: 8px !important;
+  }
+  
+  /* Compress header */
+  header {
+    margin-bottom: 12px !important;
+  }
+  
+  /* Make avatar smaller in print */
+  .size-28 {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  /* Reduce card padding */
+  .card {
+    padding: 8px !important;
+    margin-bottom: 4px !important;
+  }
+  
+  /* Compress work experience */
+  .work-experience-item {
+    margin-bottom: 6px !important;
+  }
+  
+  /* Optimize projects grid for print */
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 6px !important;
+  }
+  
+  /* Reduce badge sizes */
+  .badge {
+    font-size: 8px !important;
+    padding: 2px 4px !important;
+    margin: 1px !important;
+  }
+  
+  /* Compress text sizes */
+  h1 {
+    font-size: 18px !important;
+    margin-bottom: 4px !important;
+  }
+  
+  h2 {
+    font-size: 14px !important;
+    margin-bottom: 6px !important;
+  }
+  
+  h3 {
+    font-size: 12px !important;
+  }
+  
+  h4 {
+    font-size: 11px !important;
+  }
+  
+  p, div {
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Hide unnecessary elements */
+  .print\\:hidden {
+    display: none !important;
+  }
+  
+  /* Ensure single page */
+  * {
+    page-break-inside: avoid;
+  }
+  
+  /* Force content to fit */
+  .resume-content {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Additional compact optimizations */
+  .card-header {
+    padding: 4px 8px !important;
+  }
+  
+  .card-content {
+    padding: 4px 8px !important;
+  }
+  
+  /* Reduce margins on all elements */
+  * {
+    margin-top: 0 !important;
+    margin-bottom: 2px !important;
+  }
+  
+  /* Specific spacing for headings */
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 4px !important;
+  }
+  
+  /* Compact list items */
+  li {
+    margin-bottom: 1px !important;
+  }
+  
+  /* Reduce line height for compact text */
+  .text-pretty {
+    line-height: 1.1 !important;
+  }
+  
+  /* Make sure badges don't wrap unnecessarily */
+  .badge {
+    white-space: nowrap !important;
+  }
+  
+  /* Fix SVG icons for print */
+  svg {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Ensure SVG icons are visible in print */
+  svg path {
+    fill: currentColor !important;
+    stroke: currentColor !important;
+  }
+  
+  /* Force SVG rendering in print */
+  svg, img {
+    max-width: none !important;
+    height: auto !important;
+  }
+  
+  /* Ensure icons have proper size in print */
+  .size-4 {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  
+  .size-3 {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  
+  /* Force button styling in print */
+  button {
+    border: 1px solid #000 !important;
+    background: transparent !important;
+    color: #000 !important;
+  }
+  
+  /* Ensure social buttons are visible in print */
+  .social-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    padding: 2px 4px !important;
+    border: 1px solid #000 !important;
+    background: transparent !important;
+    text-decoration: none !important;
+    color: #000 !important;
+  }
+  
+  /* Make sure all text is black in print */
+  * {
+    color: #000 !important;
+  }
+  
+  /* Hide browser-generated headers and footers */
+  @page {
+    margin-top: 0.5in !important;
+    margin-bottom: 0.5in !important;
+    margin-left: 0.5in !important;
+    margin-right: 0.5in !important;
+  }
+  
+  /* Additional CSS to prevent browser headers/footers */
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
