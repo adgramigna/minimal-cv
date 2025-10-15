@@ -1,226 +1,143 @@
 import type { ResumeData } from "@/lib/types";
 
 export const RESUME_DATA: ResumeData = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
-  about: "Full Stack Engineer dedicated to building high-quality products.",
+  name: "Andrew Gramigna",
+  initials: "AG",
+  location: "Boston, MA",
+  locationLink: "https://www.google.com/maps/place/Boston",
+  about: "Detail-oriented Data Generalist with a passion for Analytics Engineering",
   summary: (
     <>
-      Full Stack Engineer specializing in high-performance React applications,
-      scalable Node.js services, and real-time collaboration systems.
-      Experienced in technical architecture design and remote team leadership.
+        I enjoy creating and maintaining business-critical data pipelines. 
+        My professional interests lie at the intersection of the sports industry, data, and startups. 
+        I am currently a consultant at Brooklyn Data Company, helping companies make sense of their data.
+        dbt Certified Developer with an M.S. in Computer Science.
     </>
   ),
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+  avatarUrl: "https://avatars.githubusercontent.com/u/24813853?v=4",
+  personalWebsiteUrl: "https://levergreen.dev/all",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "adgramigna1@gmail.com",
+    tel: "+15087855283",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/adgramigna",
         icon: "github",
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/andrew-gramigna/",
         icon: "linkedin",
-      },
-      {
-        name: "X",
-        url: "https://x.com/BartoszJarocki",
-        icon: "x",
       },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "Graduate, University of Massachusetts Amherst",
+      degree: "M.S. in Computer Science. 3.6",
+      start: "2016",
+      end: "2018",
+    },
+    {
+      school: "Undergraduate, University of Massachusetts Amherst",
+      degree: "Dual Degree: B.S in Mathematics, B.A. in Computer Science. 3.6",
+      start: "2012",
+      end: "2016",
     },
   ],
   work: [
     {
-      company: "Motion",
-      link: "https://motionapp.com/",
-      badges: ["Remote", "AI", "React", "Next.js", "TypeScript", "AdonisJS"],
-      title: "Senior Software Engineer",
-      start: "2025",
+      company: "Brooklyn Data Company",
+      link: "https://brooklyndata.co",
+      badges: ["Remote"],
+      title: "Senior Analytics Engineer",
+      start: "Nov 2023",
       end: null,
       description: (
         <>
-          Working on internal AI agents platform allowing marketing specialists
-          to create AI workflows.
+          Technical lead for major data migrations for clients in healthcare and e-commerce industries. 
+          
+          Adept at building trust with client stakeholders and distilling requirements based on their requests.
+          Technologies: dbt, BigQuery, Snowflake, dbt Semantic Layer
         </>
       ),
     },
     {
-      company: "Film.io",
-      link: "https://film.io",
-      badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
-      title: "Software Architect",
-      start: "2024",
-      end: "2025",
+      company: "Rhino",
+      link: "https://sayrhino.com",
+      badges: ["Remote"],
+      title: "Analytics Lead",
+      start: "Mar 2021",
+      end: "Nov 2023",
       description: (
         <>
-          Leading technical architecture of a blockchain-based film funding
-          platform.
-          <ul className="list-inside list-disc">
-            <li>
-              Architecting migration from CRA to Next.js for improved
-              performance, SEO, and DX
-            </li>
-            <li>
-              Established release process enabling faster deployments and
-              reliable rollbacks
-            </li>
-            <li>
-              Implementing system-wide monitoring and security improvements
-            </li>
-          </ul>
+          Revamped our risk-based pricing model, decoupling code into a Python microservice. 
+          Migrated our dbt-core pipeline from Google Cloud Composer to Github Actions, saving ~$40k/year.
+          Technologies: dbt, Python, Airflow, Github Actions.
         </>
       ),
     },
     {
-      company: "Parabol",
-      link: "https://parabol.co",
-      badges: [
-        "Remote",
-        "React",
-        "TypeScript",
-        "Node.js",
-        "GraphQL",
-        "Tailwind CSS",
-      ],
-      title: "Senior Full Stack Developer",
-      start: "2021",
-      end: "2024",
+      company: "Commonbond",
+      link: "https://www.businessinsider.com/student-loan-startup-commonbond-shutting-down-after-payments-pause-2022-9",
+      badges: ["Remote"],
+      title: "Analytics Manager",
+      start: "Nov 2018",
+      end: "Mar 2021",
       description: (
         <>
-          Senior developer and squad leader for an enterprise agile meeting
-          platform.
-          <ul className="list-inside list-disc">
-            <li>
-              Built design system with Tailwind CSS, improving development speed
-              and time to market
-            </li>
-            <li>
-              Implemented engineering practices: PR automation, code review
-              guidelines, and workflows
-            </li>
-            <li>
-              Open source contributions to Relay DevTools and React i18n tooling
-            </li>
-          </ul>
+          Lead development and analysis of risk-based pricing methodologies. 
+          Leveraged Python to automate manual processes for Finance and Operations teams.
+          Technologies: Python, Jupyter, Looker, Retool, Redshift
         </>
       ),
-    },
-    {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote", "React", "TypeScript", "Node.js", "Android", "Kotlin"],
-      title: "Lead Android Developer → Full Stack Developer",
-      start: "2015",
-      end: "2021",
-      description: (
-        <>
-          Successfully transitioned from mobile to full-stack development while
-          leading distributed teams.
-          <ul className="list-inside list-disc">
-            <li>
-              Led frontend team at Evercast, building real-time platform
-              supporting 30+ users per room with HD streaming and collaboration
-              tools
-            </li>
-            <li>
-              Developed offline-first Android app for DKMS, improving donor
-              registration process
-            </li>
-            <li>
-              Led development teams across multiple successful client projects
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Jojo Mobile",
-      link: "https://bsgroup.eu/",
-      badges: ["On Site", "Android", "Java", "Kotlin"],
-      title: "Android Developer → Lead Android Developer",
-      start: "2012",
-      end: "2015",
-      description: (
-        <>
-          First Android developer, grew and led a team of 15+ engineers while
-          establishing engineering culture.
-          <ul className="list-inside list-disc">
-            <li>
-              Developed apps for major Polish companies including LOT, Polskie
-              Radio, and Agora
-            </li>
-            <li>Built and mentored high-performing mobile development team</li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
-      badges: ["On Site", "C/C++", "LTE", "Agile"],
-      title: "C/C++ Developer",
-      start: "2010",
-      end: "2012",
-      description:
-        "Developed software for LTE base stations at enterprise scale, gaining strong fundamentals in software architecture, testing practices, and cross-team collaboration.",
     },
   ],
   skills: [
-    "React/Next.js/Remix",
-    "TypeScript",
-    "Tailwind CSS",
-    "Design Systems",
-    "WebRTC",
-    "WebSockets",
-    "Node.js",
-    "GraphQL",
-    "Relay",
-    "System Architecture",
-    "Remote Team Leadership",
+    "SQL",
+    "dbt",
+    "Python",
+    "GCP",
+    "BigQuery",
+    "Snowflake",
+    "Web Scraping",
+    "Fivetran",
+    "DuckDB",
+    "Airflow",
+    "Github Actions",
+    "pandas",
+    "Polars",
+    "scikit-learn",
+    "Tableau",
+    "Looker",
+    "Retool"
   ],
   projects: [
     {
-      title: "Monito",
-      techStack: ["TypeScript", "Next.js", "Browser Extension", "PostgreSQL"],
+      title: "Levergreen",
+      techStack: ["Scrapy", "Neon Postgres", "dbt", "Github Actions", "Hightouch", "Softr"],
       description:
-        "Browser extension for debugging web applications. Includes taking screenshots, screen recording, E2E tests generation and generating bug reports",
+        "(Sold to https://joinprospect.com) Scrapes open roles from job boards Greenhouse, Lever, Ashby, and Rippling",
       link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
+        label: "levergreen.dev/all",
+        href: "https://levergreen.dev/all",
       },
     },
     {
-      title: "Consultly",
+      title: "Chessray",
       techStack: [
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
-        "Tailwind CSS",
-        "PostgreSQL",
-        "Redis",
+        "Python",
+        "msgspec",
+        "dbt",
+        "DuckDB",
+        "Evidence"
       ],
       description:
-        "Platform for online consultations with real-time video meetings and scheduling",
+        "A data-driven deep dive into the 2024 FIDE Candidates Tournament",
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "Chessray Evidence",
+        href: "https://chessray.evidence.app/2024%20FIDE%20Candidates%20Tournament/overview/",
       },
     },
     {
