@@ -25,7 +25,7 @@ function ProjectLink({
   link,
 }: ProjectLinkProps) {
   if (!link) {
-    return <span>{title}</span>;
+    return <span className="underline">{title}</span>;
   }
 
   return (
@@ -34,7 +34,7 @@ function ProjectLink({
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 hover:underline"
+        className="inline-flex items-center gap-1 underline hover:no-underline"
         aria-label={`${title} project (opens in new tab)`}
       >
         {title}
@@ -87,7 +87,7 @@ function ProjectTags({
 
 interface ProjectCardProps {
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   tags: ProjectTags;
   link?: string;
 }
@@ -109,7 +109,7 @@ function ProjectCard({
             <ProjectLink title={title} link={link} />
           </CardTitle>
           <CardDescription
-            className="text-pretty font-mono text-xs print:text-[10px]"
+            className="text-pretty font-mono text-xs print:text-[10px] print:opacity-80"
             aria-label="Project description"
           >
             {description}
@@ -139,7 +139,7 @@ export function Projects({
         Side projects
       </h2>
       <div
-        className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-1 projects-grid"
+        className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-1 print:pl-40 projects-grid"
         role="feed"
         aria-labelledby="side-projects"
       >

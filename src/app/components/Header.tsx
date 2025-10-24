@@ -91,7 +91,7 @@ function ContactButtons({
           <SocialButton
             href={`mailto:${contact.email}`}
             iconType="mail"
-            label="Email"
+            label={contact.email}
           />
         </li>
       )}
@@ -100,7 +100,7 @@ function ContactButtons({
           <SocialButton
             href={`tel:${contact.tel}`}
             iconType="phone"
-            label="Phone"
+            label={contact.tel}
           />
         </li>
       )}

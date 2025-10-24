@@ -116,13 +116,13 @@ function WorkExperienceItem({
           <WorkPeriod start={start} end={end} />
         </div>
 
-        <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
+        <h4 className="font-mono text-sm font-medium leading-none print:text-[12px]">
           {title}
         </h4>
       </CardHeader>
 
       <CardContent>
-        <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
+        <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] print:opacity-80 text-pretty">
           {description}
         </div>
         <div className="mt-2">
@@ -148,7 +148,7 @@ export function WorkExperience({
   work,
 }: WorkExperienceProps) {
   return (
-    <Section>
+    <Section className="print:gap-y-0">
       <h2 className="text-xl font-bold" id="work-experience">
         Work Experience
       </h2>

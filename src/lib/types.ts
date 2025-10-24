@@ -41,7 +41,7 @@ export interface ResumeData {
   projects: Array<{
     title: string;
     techStack: string[];
-    description: string;
+    description: string | React.ReactNode;
     link?: {
       label: string;
       href: string;
@@ -149,7 +149,7 @@ export function resumeDataToGraphQL(data: ResumeData): GraphQLMe {
     projects: data.projects.map((project) => ({
       title: project.title,
       techStack: project.techStack,
-      description: project.description,
+      description: reactToString(project.description),
       link: project.link,
     })),
   };
