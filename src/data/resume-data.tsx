@@ -11,14 +11,14 @@ export const RESUME_DATA: ResumeData = {
         I enjoy creating and maintaining business-critical data pipelines. 
         My professional interests lie at the intersection of the sports industry, data, and startups. 
         I am currently a consultant at Brooklyn Data Company, helping companies make sense of their data.
-        dbt Certified Developer with an M.S. in Computer Science.
+        dbt Certified Developer and Instructor.
     </>
   ),
   avatarUrl: "https://avatars.githubusercontent.com/u/24813853?v=4",
   personalWebsiteUrl: "https://levergreen.dev/all",
   contact: {
     email: "adgramigna1@gmail.com",
-    tel: "+15087855283",
+    tel: "+1 (508)785-5283",
     social: [
       {
         name: "GitHub",
@@ -56,10 +56,26 @@ export const RESUME_DATA: ResumeData = {
       end: null,
       description: (
         <>
-          Technical lead for major data migrations for clients in healthcare and e-commerce industries. 
+          <ul className="list-inside list-disc">
+            <li className="pl-4">
+              Technical lead on major data migrations for clients in healthcare and e-commerce industries. 
+            </li>
+            <li className="pl-4">
+              Maintain key metrics for a large healthcare client by leveraging the dbt Semantic layer.
+            </li>
+            <li className="pl-4">
+              Adept at building trust with client stakeholders and distilling requirements based on their requests.
+            </li>
+            <li className="pl-4">
+              Given the title internally of dbt Platform Lead, in charge of defining our dbt strategy and best practices.
+            </li>
+            <li className="pl-4">
+              Technologies: dbt, BigQuery, Snowflake, dbt Semantic Layer
+            </li>
+          </ul>
+
+         
           
-          Adept at building trust with client stakeholders and distilling requirements based on their requests.
-          Technologies: dbt, BigQuery, Snowflake, dbt Semantic Layer
         </>
       ),
     },
@@ -74,14 +90,14 @@ export const RESUME_DATA: ResumeData = {
         <>
           Revamped our risk-based pricing model, decoupling code into a Python microservice. 
           Migrated our dbt-core pipeline from Google Cloud Composer to Github Actions, saving ~$40k/year.
-          Technologies: dbt, Python, Airflow, Github Actions.
+          Technologies: dbt, Python, Airflow, Github Actions, Stripe.
         </>
       ),
     },
     {
       company: "Commonbond",
       link: "https://www.businessinsider.com/student-loan-startup-commonbond-shutting-down-after-payments-pause-2022-9",
-      badges: ["Remote"],
+      badges: ["New York City"],
       title: "Analytics Manager",
       start: "Nov 2018",
       end: "Mar 2021",
@@ -103,11 +119,13 @@ export const RESUME_DATA: ResumeData = {
     "Snowflake",
     "Web Scraping",
     "Fivetran",
+    "Elementary",
     "DuckDB",
     "Airflow",
     "Github Actions",
     "pandas",
     "Polars",
+    "AWS",
     "scikit-learn",
     "Tableau",
     "Looker",
@@ -116,9 +134,21 @@ export const RESUME_DATA: ResumeData = {
   projects: [
     {
       title: "Levergreen",
-      techStack: ["Scrapy", "Neon Postgres", "dbt", "Github Actions", "Hightouch", "Softr"],
-      description:
-        "(Sold to https://joinprospect.com) Scrapes open roles from job boards Greenhouse, Lever, Ashby, and Rippling",
+      techStack: ["Scrapy", "Postgres", "dbt", "Elementary", "Hightouch"],
+      description: (
+        <>
+          (Sold to{" "}
+          <a
+            href="https://joinprospect.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:no-underline"
+          >
+            Prospect Ratings
+          </a>
+          ) Scrapes open roles from job boards Greenhouse, Lever, Ashby, and Rippling
+        </>
+      ),
       link: {
         label: "levergreen.dev/all",
         href: "https://levergreen.dev/all",
@@ -139,16 +169,6 @@ export const RESUME_DATA: ResumeData = {
         label: "Chessray Evidence",
         href: "https://chessray.evidence.app/2024%20FIDE%20Candidates%20Tournament/overview/",
       },
-    },
-    {
-      title: "Minimalist CV",
-      techStack: ["TypeScript", "Next.js", "Tailwind CSS"],
-      description:
-        "An open source minimalist, print friendly CV template with a focus on readability and clean design. >9k stars on GitHub",
-      link: {
-        label: "Minimalist CV",
-        href: "https://github.com/BartoszJarocki/cv",
-      },
-    },
+    }
   ],
 } as const;
